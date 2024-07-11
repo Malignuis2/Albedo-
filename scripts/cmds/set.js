@@ -20,7 +20,7 @@
   onStart: async function ({ args, event, api, usersData }) {
     const permission = ["61559119588245"];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("𝙋𝘼𝙎 𝙏𝙊𝙐𝘾𝙃𝙀 𝘼𝙐 𝙁𝙍𝙄𝘾 𝘿𝙐 𝙏𝙊𝙈𝘽𝙀𝘼𝙐𝘽🖕.", event.threadID, event.messageID);
+    api.sendMessage("𝗤𝘂𝗲𝘀𝗾𝘂𝗲 𝘁'𝗲𝘀 𝗯𝗲𝘁𝗲 🙄 𝗷𝗼𝘂𝗲 .", event.threadID, event.messageID);
     return;
   }
     const query = args[0];
