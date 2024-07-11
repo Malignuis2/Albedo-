@@ -51,14 +51,13 @@ module.exports = {
       await usersData.set(event.senderID, userData);
       return message.reply(`💚𝑴𝑨𝑹𝑲 𝑽𝑬𝑹𝑴𝑰𝑳𝑳𝑰𝑶𝑵💚
  ───────────
-👑[ ${resultString} ]👑\ 💘|𝑪𝑶𝑶𝑳 𝑻𝑼 𝑮𝑨𝑮𝑵𝑬 🎀${winAmount}€🎀!`);
+👑[ ${resultString} ]👑\n💘|𝑪𝑶𝑶𝑳 𝑻𝑼 𝑮𝑨𝑮𝑵𝑬 🎀${winAmount}€🎀!`);
     } else {
       userData.money -= betAmount;
       await usersData.set(event.senderID, userData);
       return message.reply(`😐𝑴𝑨𝑹𝑲 𝑽𝑬𝑹𝑴𝑰𝑳𝑳𝑰𝑶𝑵😐
   ─────────── 
-🍁[ ${resultString} ]🍁
-🎯| 𝑻𝑼 𝑷𝑬𝑹𝑫𝑺 🎀${betAmount}€🎀 𝑪𝑶𝑴𝑴𝑬 𝑻𝑼 𝑬𝑺 𝑭𝑨𝑰𝑩𝑳𝑬 😹`);
+🍁[ ${resultString} ]🍁\n🎯| 𝑻𝑼 𝑷𝑬𝑹𝑫𝑺 🎀${betAmount}€🎀\n𝑪𝑶𝑴𝑴𝑬 𝑻𝑼 𝑬𝑺 𝑭𝑨𝑰𝑩𝑳𝑬 😹`);
     }
   }
         }
