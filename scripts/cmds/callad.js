@@ -56,8 +56,8 @@ module.exports = {
 		if (config.adminBot.length == 0)
 			return message.reply(getLang("noAdmin"));
 		const senderName = await usersData.getName(senderID);
-		const msg = "==📨️𝘾𝘼𝙇𝙇📬𝙎𝙊𝙉𝙄𝘾📨️=="
-			+ `\n- User Name: 🍀${senderName}🍀`
+		const msg = "==📨️𝘼𝙋𝙋𝙀𝙇𝙇𝙀 📨️=="
+			+ `\n- User Name: 🎀${senderName}🎀`
 			+ `\n- User ID: 🎶${senderID}🎶`
 			+ (isGroup ? getLang("sendByGroup", (await threadsData.get(threadID)).threadName, threadID) : getLang("sendByUser"));
 
