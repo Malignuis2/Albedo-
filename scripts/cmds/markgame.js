@@ -1,7 +1,7 @@
 module.exports = {
   config: {
-    name: "lord",
-    aliases: ["lrd"],
+    name: "markgame",
+    aliases: ["mrk"],
     version: "1.0",
     author: "ʬɸʬ 𝐒𝐡𝐢𝐬𝐮𝐢 𝐗 𝐀𝐫𝐜𝐚𝐧𝐨 ʬɸʬ",
     countDown: 10,
@@ -9,7 +9,7 @@ module.exports = {
     shortDescription: "Amuses toi bien au jeu du hasard",
     longDescription: "Seul le hasard tu rendras riche ou pauvre...Bonne chance",
     category: "game",
-    guide: "{pn} <Gown/Ainz> <amount of money>"
+    guide: "{pn} <gamble> <amount of money>"
   },
 
   onStart: async function ({ args, message, usersData, event }) {
@@ -18,16 +18,16 @@ module.exports = {
     const user = event.senderID;
     const userData = await usersData.get(event.senderID);
 
-    if (!["gown", "ainz"].includes(betType)) {
-      return message.reply("❤‍🔥 | 𝗖𝗵𝗼𝗶𝘀𝗶 : '𝙜𝙤𝙬𝙣' 𝗼𝘂 '𝙖𝙞𝙣𝙯'.");
+    if (!["gamble"].includes(betType)) {
+      return message.reply("🧘‍♂️| TAPE 'gamble' FILS");
     }
 
     if (!Number.isInteger(betAmount) || betAmount < 50) {
-      return message.reply("🌿 | 𝐌𝐢𝐬𝐞 𝐚𝐮 𝐦𝐨𝐢𝐧𝐬 50$ 𝐨𝐮 𝐩𝐥𝐮𝐬.");
+      return message.reply("😎 | 𝐌𝐢𝐬𝐞 𝐚𝐮 𝐦𝐨𝐢𝐧𝐬 50$ 𝐨𝐮 𝐩𝐥𝐮𝐬.");
     }
 
     if (betAmount > userData.money) {
-      return message.reply("💁‍♀ | 𝐕𝐚, 𝐭𝐮 𝐧'𝐚𝐬 𝐩𝐚𝐬 𝐜𝐞𝐭𝐭𝐞 𝐬𝐨𝐦𝐦𝐞 💔");
+      return message.reply("🖕 | REGARDE TON SOLDE AVANT DE MISER CHIEN");
     }
 
     const dice = [1, 2, 3, 4, 5, 6];
@@ -49,16 +49,16 @@ module.exports = {
       const winAmount = 2 * betAmount;
       userData.money += winAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`🎀✨𝐀𝐋𝐁𝐄𝐃𝐎✨🎀
+      return message.reply(`💚𝑴𝑨𝑹𝑲 𝑽𝑬𝑹𝑴𝑰𝑳𝑳𝑰𝑶𝑵💚
  ───────────
-💘[ ${resultString} ]💘\ 😷|𝐁𝐈𝐄𝐍 𝐌𝐎𝐑𝐓𝐄𝐋𝐋𝐄 😒 , 𝐕𝐎𝐈𝐋𝐀 𝐓𝐀 𝐑𝐄𝐂𝐎𝐌𝐏𝐄𝐍𝐒𝐄 🎀${winAmount}€🎀!`);
+👑[ ${resultString} ]👑\ 💘|𝑪𝑶𝑶𝑳 𝑻𝑼 𝑮𝑨𝑮𝑵𝑬 🎀${winAmount}€🎀!`);
     } else {
       userData.money -= betAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(` 🍁🔥𝐀𝐋𝐁𝐄𝐃𝐎🔥🍁
+      return message.reply(`😐𝑴𝑨𝑹𝑲 𝑽𝑬𝑹𝑴𝑰𝑳𝑳𝑰𝑶𝑵😐
   ─────────── 
-ʕ˖͜͡˖ʔ[ ${resultString} ]ʕ˖͜͡˖ʔ
-🙃| 𝐁𝐈𝐄𝐍 𝐅𝐀𝐈𝐓 𝐏𝐎𝐔𝐑 𝐓𝐎𝐈 𝐇𝐔𝐌𝐀𝐈𝐍. 𝐓𝐔 𝐏𝐄𝐑𝐃𝐒 🎀${betAmount}€🎀.`);
+🍁[ ${resultString} ]🍁
+🎯| 𝑻𝑼 𝑷𝑬𝑹𝑫𝑺 🎀${betAmount}€🎀 𝑪𝑶𝑴𝑴𝑬 𝑻𝑼 𝑬𝑺 𝑭𝑨𝑰𝑩𝑳𝑬 😹`);
     }
   }
         }
