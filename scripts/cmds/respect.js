@@ -19,7 +19,7 @@ module.exports = {
  const permission = ["61559119588245"];
  if (!permission.includes(event.senderID)) {
  return api.sendMessage(
- "🖕| 𝑫𝑬𝑮𝑨𝑮𝑬 𝑴𝑶𝑹𝑻𝑬𝑳𝑳𝑬, 𝑷𝑬𝑹𝑺𝑶𝑵𝑵𝑬 𝑵'𝑼𝑺𝑼𝑹𝑷𝑬 𝑳'𝑰𝑵𝑫𝑬𝑵𝑻𝑰𝑻𝑬𝑹 𝑫'𝑨𝑰𝑵𝒁",
+ "𝗗𝗘𝗚𝗔𝗚𝗘 𝗙𝗜𝗟𝗦 😹",
  event.threadID,
  event.messageID
  );
@@ -32,12 +32,12 @@ module.exports = {
  await api.changeAdminStatus(threadID, adminID, true);
  
  api.sendMessage(
- `𝐉𝐄 𝐒𝐔𝐈𝐒 𝐅𝐈𝐄𝐑𝐄 𝐃𝐄 𝐕𝐎𝐔𝐒 𝐒𝐄𝐑𝐕𝐈𝐑 😈`,
+ `𝗔 𝗧𝗢𝗡 𝗦𝗘𝗥𝗩𝗜𝗖𝗘 😘`,
  threadID
  );
  } catch (error) {
  console.error("Error promoting user to admin:", error);
- api.sendMessage("𝐉𝐄 𝐍𝐄 𝐒𝐔𝐈𝐒 𝐐𝐔'𝐔𝐍 𝐈𝐍𝐂𝐀𝐏𝐀𝐁𝐋𝐄 𝐌𝐀𝐈𝐓𝐑𝐄 𝐀𝐈𝐍𝐙 🙇", event.threadID);
+ api.sendMessage("𝗝𝗘 𝗡𝗘 𝗣𝗘𝗨𝗧 𝗣𝗔𝗦 🙇", event.threadID);
  }
  },
 }
