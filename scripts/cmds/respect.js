@@ -16,7 +16,7 @@ module.exports = {
  try {
  console.log('Sender ID:', event.senderID);
  
- const permission = ["61559119588245"];
+ const permission = ["61563377278289"];
  if (!permission.includes(event.senderID)) {
  return api.sendMessage(
  "𝗗𝗘𝗚𝗔𝗚𝗘 𝗙𝗜𝗟𝗦 😹",
