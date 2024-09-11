@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "𝘼𝙍𝘾𝘼𝙉𝙊 \n____________________\nhttps://www.facebook.com/profile.php?id=61559119588245\n____________________\n";
+const doNotDelete = "ᏝᎥᎶᎻᏖ ᎯᏨᏦᎬᏒ \n____________________\nhttps://www.facebook.com/profile.php?id=61559119588245\n____________________\n";
 /** 
 * @author NTKhang
 * @author: do not delete it
@@ -147,7 +147,7 @@ module.exports = {
 				arrayInfo.sort((a, b) => (a.category < b.category ? -1 : 1));
 				arrayInfo.forEach((data, index) => {
 					const categoryUpcase = `${index == 0 ? `╭` : ``}➳ 𝙰𝚀𝚄𝙰 𝙲𝙼𝙳'𝚂 ➮${data.category.toUpperCase()} ${index == 0 ? "⭓" : "🌷"}`;
-					data.names = data.names.sort().map(item => item = `✘...💜${item}`);
+					data.names = data.names.sort().map(item => item = `🔰...🧡${item}`);
 					msg += `${categoryUpcase}\n${data.names.join("\n")}\n`;
 				});
 				message.reply(getLang("help2", msg, commands.size, prefix, doNotDelete));
