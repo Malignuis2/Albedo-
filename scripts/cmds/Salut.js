@@ -15,6 +15,6 @@ onChat: async function({
     message,
     getLang
 }) {
-    if (event.body && event.body.toLowerCase() == "salut") return message.reply("𝑫𝑰𝑻 𝑨𝑽𝑬𝑪 𝑼𝑵𝑬 𝑽𝑶𝑰𝑿 𝑫𝑬 𝑭𝑨𝑰𝑩𝑳𝑬 🙃");
+    if (event.body && event.body.toLowerCase() == "salut") return message.reply("Salutations, j'appliquerai le châtiment céleste à tous ceux qui manquerons de respect à la famille Gambell/n/n Passe une bonne journée 😊");
 }
 };
